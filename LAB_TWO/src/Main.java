@@ -127,6 +127,7 @@ public class Main {
 		System.out.println((n<<1 == n * 2)); // true
 		
 		anotherMethod(args);
+		playWithStrings(args);
 	}
 	
 	public static void anotherMethod(String[] args) {
@@ -177,7 +178,78 @@ public class Main {
 			System.out.println(numFour + " is not a big value");
 			System.out.println(ifBlockVar + " is definitely small");
 		}
+	}
+	// Create another static void method - `playWithStrings()`
+	public static void playWithStrings(String[] args) {
+		/* =====-=====-=====-=====-=====
+			  STEP 7
+		   =====-=====-=====-=====-===== */
+
+		// Create a `String` variable to represent your first name and initialize it with a string literal.
+		String firstName = "Harry";
 		
+		// Create a `String` variable to represent your last name and initialize it by using `new()` with your last name.
+		String lastName = new String("Potter");
+		
+		// Using the `concat()` method, print a greeting of "Hello firstName lastName"
+		// Call the method from `main()` and inspect the results.
+		System.out.println(firstName.concat(" " + lastName));
+		
+		// Change the println method to use the overloaded "+" operator to make the same output string.
+		System.out.println(firstName  + " " + lastName);
+		
+		// Create a new String variable `fullName` by combining the first and last with proper spacing.  
+		String fullName = firstName  + " " + lastName;
+		
+		// This variable will be used for many of the following exercises:
+		// Find and the following values:
+		
+		// What is the total length of the string?
+		System.out.println(fullName.length()); // 12
+		
+		// Index of the first 'o'
+		System.out.println(fullName.indexOf('o')); // 7
+		
+		// Which letter is at position 7?
+		System.out.println(fullName.charAt(6)); // P
+		
+		// Does the full name contain the word "son"?
+		System.out.println(fullName.contains("son")); // false
+		
+		// What are the last 5 letters in the full name?
+		System.out.println(fullName.substring(fullName.length() - 5)); // otter
+		
+		// Does the full name contain an apostrophe or dash?
+		System.out.println(fullName.matches(".*[-'].*")); // false
+		
+		String stringTwo = "Harry's Wand";
+		System.out.println(stringTwo.matches(".*[-'].*")); // true
+		
+		/*
+		 * Print the above values using format strings, in complete sentence form.  For example:
+		 * "The total length of the String Tim Smith is 9".
+		 * "The String Tim Smith does not have an 'o'".
+		 * "The letter "t" is at position 7.
+		 * etc.
+		 */
+		
+		System.out.println(String.format("The total length of the string Harry Potter is %d.", fullName.length()));
+		// The total length of the string Harry Potter is 12.
+		System.out.println(String.format("The index of the first o is %d.", fullName.indexOf('o')));
+		// The index of the first o is 7.
+		System.out.println(String.format("The letter at position 7 is %c.", fullName.charAt(6)));
+		// The letter at position 7 is P.
+		String doesItContain = fullName.contains("son") ? "contains" : "does not contain";
+		System.out.println(String.format("The name Harry Potter %s the word \"son\".", doesItContain));
+		// The name Harry Potter does not contain the word "son".
+		System.out.println(String.format("\"%s\" are the last 5 letters of the full name", fullName.substring(fullName.length() - 5)));
+		// "otter" are the last 5 letters of the full name
+		doesItContain = fullName.matches(".*[-'].*") ? "contains" : "does not contain";
+		System.out.println(String.format("The name \"Harry Potter\" %s an apostrophe or dash.", doesItContain));
+		// The name Harry Potter does not contain an apostrophe or dash.
+		doesItContain = stringTwo.matches(".*[-'].*") ? "contain" : "do not contain";
+		System.out.println(String.format("The words \"Harry's Wand\" %s an apostrophe or dash.", doesItContain));
+		// The words "Harry's Wand" contain an apostrophe or dash.
 	}
 
 }
