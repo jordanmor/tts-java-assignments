@@ -5,7 +5,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		
 		/* =====-=====-=====-=====-=====
-					   STEP 1
+		  			   STEP 1
 		   =====-=====-=====-=====-===== */
 		
 		// Declare an int variable (firstInt) and assign it the value of 6.
@@ -36,8 +36,8 @@ public class Main {
 		System.out.println(myDouble); // 1.343423423E9
 		
 		/* =====-=====-=====-=====-=====
-					  STEP 2
-		   =====-=====-=====-=====-===== */
+		 * 			   STEP 2
+		 * =====-=====-=====-=====-===== */
 		
 		// Create a new value by adding firstInt to secondInt and print the result.
 		System.out.println((firstInt + secondInt)); // 26
@@ -59,8 +59,8 @@ public class Main {
 		System.out.println(newInt); // 9
 		
 		/* =====-=====-=====-=====-=====
-					   STEP 3
-		   =====-=====-=====-=====-===== */
+		 * 			   STEP 3
+		 * =====-=====-=====-=====-===== */
 		
 		// Declare and int variable x and assign it the value of 100;
 		int x = 100;
@@ -102,8 +102,8 @@ public class Main {
 		System.out.println("x less than y is equal to NOT x greater than y: " + (x < y == !(x > y))); // true
 		
 		/* =====-=====-=====-=====-=====
-					   STEP 4
-		   =====-=====-=====-=====-===== */
+		 * 			   STEP 4
+		 * =====-=====-=====-=====-===== */
 		
 		// Create an integer variable n and assign it 64
 		int n = 64;
@@ -133,8 +133,8 @@ public class Main {
 	public static void anotherMethod(String[] args) {
 		
 		/* =====-=====-=====-=====-=====
-					   STEP 5
-		   =====-=====-=====-=====-===== */
+		 * 			   STEP 5
+		 * =====-=====-=====-=====-===== */
 		
 		// Declare an int variable inside of the `anotherMethod` method and assign it a value.
 		// With the current code is it possible to reference that variable from inside `main()`?
@@ -162,8 +162,8 @@ public class Main {
 		// Call this method from the `main()` method to see its output.
 		
 		/* =====-=====-=====-=====-=====
-					   STEP 6
-		   =====-=====-=====-=====-===== */
+		 * 			   STEP 6
+		 * =====-=====-=====-=====-===== */
 		
 		// In the `anotherMethod()`, change the primitive `int` to be a `Integer` variable.
 		// Instead of a hard-coded 1000, create an `Integer` variable to check against, but use the string value "1000" to create the `Integer`.
@@ -183,8 +183,8 @@ public class Main {
 	public static void playWithStrings(String[] args) {
 		
 		/* =====-=====-=====-=====-=====
-					   STEP 7
-		   =====-=====-=====-=====-===== */
+		 * 			   STEP 7
+		 * =====-=====-=====-=====-===== */
 
 		// Create a `String` variable to represent your first name and initialize it with a string literal.
 		String firstName = "Harry";

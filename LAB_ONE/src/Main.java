@@ -68,8 +68,8 @@ public class Main {
 		System.out.println("z variable: " + z);
 		
 		/* =====-=====-=====-=====-=====
-        		 BOOLEAN OPERATORS
-  		   =====-=====-=====-=====-===== */
+		 * 		  BOOLEAN OPERATORS
+		 * =====-=====-=====-=====-===== */
 		
 		// Reuse the previous int values and declare them as follows with new values:
 		x = y = 13;
@@ -93,8 +93,8 @@ public class Main {
 		System.out.println("Value of z > (x+2): " + (z > (x+2)));
 		
 		/* =====-=====-=====-=====-=====
-		         BINARY OPERATORS
-		   =====-=====-=====-=====-===== */
+		 * 		  BINARY OPERATORS
+		 * =====-=====-=====-=====-===== */
 		
 		// For binary operators, write statements that will verify the first 
 		// 6 lines of the table on binary operations. 
@@ -125,11 +125,11 @@ public class Main {
 		System.out.println("BITWISE 50 COMP SHIFT RIGHT (CARRY) 2 is: " + binaryThree); // -13
 		
 		binaryThree = (-binaryOne)>>>2;
-		System.out.println("BITWISE 50 COMP SHIFT RIGHT (NON CARRY) 2 is: " + binaryThree); // 1073741811		
+		System.out.println("BITWISE 50 COMP SHIFT RIGHT (NON CARRY) 2 is: " + binaryThree); // 1073741811	
 	
 		/* =====-=====-=====-=====-=====
-					   STRINGS
-		   =====-=====-=====-=====-===== */
+		 * 		  	  STRINGS
+		 * =====-=====-=====-=====-===== */
 		
 		// Declare three string variables, firstName , lastName , middle and initialize them with the appropriate values. 
 		// Print out each variable to ensure that the values are correct.
@@ -204,8 +204,8 @@ public class Main {
 		System.out.println(strTemplate); // The three integers in this string are 22, 89 and 93.
 		
 		/* =====-=====-=====-=====-=====
-					  WRAPPERS
-		   =====-=====-=====-=====-===== */
+		 * 		  	 WRAPPERS
+		 * =====-=====-=====-=====-===== */
 		
 		// Declare an integer wrapper object and initialize it with the value of 42.
 		Integer obj = 42;
