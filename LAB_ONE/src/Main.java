@@ -88,6 +88,35 @@ public class Main {
 		System.out.println("Value of z < (x+y): " + (z < (x+y)));
 		System.out.println("Value of z > (x+2): " + (z > (x+2)));
 		
+		// For binary operators, write statements that will verify the first 
+		// 6 lines of the table on binary operations. 
 		
+		int binaryOne = 50;
+		int binaryTwo = 19;
+		int binaryThree = 0;
+		
+		binaryThree = binaryOne & binaryTwo;
+		System.out.println("BITWISE 50 AND 19 is: " + binaryThree); // 18
+		
+		binaryThree = binaryOne / binaryTwo;
+		System.out.println("BITWISE 50 OR 19 is: " + binaryThree); // 2
+		
+		binaryThree = binaryOne ^ binaryTwo;
+		System.out.println("BITWISE 50 XOR 19 is: " + binaryThree); // 33
+		
+		binaryThree = ~binaryOne;
+		System.out.println("BITWISE 50 COMPLEMENT is: " + binaryThree); // 51
+		
+		binaryThree = binaryTwo<<2;
+		System.out.println("BITWISE 19 SHIFT LEFT is: " + binaryThree); // 76
+		
+		binaryThree = binaryTwo>>>2;
+		System.out.println("BITWISE 19 SHIFT RIGHT (NON CARRY) 2 is: " + binaryThree); // 4
+		
+		binaryThree = (-binaryOne)>>2;
+		System.out.println("BITWISE 50 COMP SHIFT RIGHT (CARRY) 2 is: " + binaryThree); // -13
+		
+		binaryThree = (-binaryOne)>>>2;
+		System.out.println("BITWISE 50 COMP SHIFT RIGHT (NON CARRY) 2 is: " + binaryThree); // 1073741811
 	}
 }
