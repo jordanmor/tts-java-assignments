@@ -5,8 +5,8 @@ public class Main {
 		// TODO Auto-generated method stub
 		
 		/* =====-=====-=====-=====-=====
-		 			   STEP 1
-	   	   =====-=====-=====-=====-===== */
+					   STEP 1
+		   =====-=====-=====-=====-===== */
 		
 		// Declare an int variable (firstInt) and assign it the value of 6.
 		int firstInt = 6;
@@ -15,7 +15,7 @@ public class Main {
 		int secondInt = 20;
 		
 		// Declare another int variable (thirdInt) and don't assign it any value.
-//		int thirdInt;
+		// int thirdInt;
 		int thirdInt = 0;
 		
 		// Declare a float variable and assign it the value of 4.4f.
@@ -36,8 +36,8 @@ public class Main {
 		System.out.println(myDouble); // 1.343423423E9
 		
 		/* =====-=====-=====-=====-=====
-		   			   STEP 2
-           =====-=====-=====-=====-===== */
+					  STEP 2
+		   =====-=====-=====-=====-===== */
 		
 		// Create a new value by adding firstInt to secondInt and print the result.
 		System.out.println((firstInt + secondInt)); // 26
@@ -59,7 +59,7 @@ public class Main {
 		System.out.println(newInt); // 9
 		
 		/* =====-=====-=====-=====-=====
-		   			  STEP 3
+					   STEP 3
 		   =====-=====-=====-=====-===== */
 		
 		// Declare and int variable x and assign it the value of 100;
@@ -102,7 +102,7 @@ public class Main {
 		System.out.println("x less than y is equal to NOT x greater than y: " + (x < y == !(x > y))); // true
 		
 		/* =====-=====-=====-=====-=====
-			  		   STEP 4
+					   STEP 4
 		   =====-=====-=====-=====-===== */
 		
 		// Create an integer variable n and assign it 64
@@ -133,7 +133,7 @@ public class Main {
 	public static void anotherMethod(String[] args) {
 		
 		/* =====-=====-=====-=====-=====
-		   			   STEP 5
+					   STEP 5
 		   =====-=====-=====-=====-===== */
 		
 		// Declare an int variable inside of the `anotherMethod` method and assign it a value.
@@ -162,7 +162,7 @@ public class Main {
 		// Call this method from the `main()` method to see its output.
 		
 		/* =====-=====-=====-=====-=====
-		   			   STEP 6
+					   STEP 6
 		   =====-=====-=====-=====-===== */
 		
 		// In the `anotherMethod()`, change the primitive `int` to be a `Integer` variable.
@@ -181,8 +181,9 @@ public class Main {
 	}
 	// Create another static void method - `playWithStrings()`
 	public static void playWithStrings(String[] args) {
+		
 		/* =====-=====-=====-=====-=====
-			  STEP 7
+					   STEP 7
 		   =====-=====-=====-=====-===== */
 
 		// Create a `String` variable to represent your first name and initialize it with a string literal.

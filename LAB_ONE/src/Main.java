@@ -128,7 +128,7 @@ public class Main {
 		System.out.println("BITWISE 50 COMP SHIFT RIGHT (NON CARRY) 2 is: " + binaryThree); // 1073741811		
 	
 		/* =====-=====-=====-=====-=====
-		  			  STRINGS
+					   STRINGS
 		   =====-=====-=====-=====-===== */
 		
 		// Declare three string variables, firstName , lastName , middle and initialize them with the appropriate values. 
@@ -204,7 +204,7 @@ public class Main {
 		System.out.println(strTemplate); // The three integers in this string are 22, 89 and 93.
 		
 		/* =====-=====-=====-=====-=====
-		  			 WRAPPERS
+					  WRAPPERS
 		   =====-=====-=====-=====-===== */
 		
 		// Declare an integer wrapper object and initialize it with the value of 42.
