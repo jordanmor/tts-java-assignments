@@ -203,5 +203,33 @@ public class Main {
 		// Now use that template and an integer to print the template with the values of 22, 89, and 93.
 		System.out.println(strTemplate); // The three integers in this string are 22, 89 and 93.
 		
+		/* =====-=====-=====-=====-=====
+		  			 WRAPPERS
+		   =====-=====-=====-=====-===== */
+		
+		// Declare an integer wrapper object and initialize it with the value of 42.
+		Integer obj = 42;
+		System.out.println(obj); // 42
+		
+		// Declare another wrapper object and initialize it from the literal "88".
+		Integer obj2 = Integer.parseInt("88");
+		System.out.println(obj2); // 88
+		
+		// Combine a wrapper class with a string substitution (and to prove out some of the earlier statements), 
+		// enter the following three lines and examine the output:
+		
+		int b1 = 10;
+		int b2 = 20;
+		Integer b3 = Integer.parseInt("30");
+		 
+		b3 = b2>>2;
+		System.out.println("19 SHIFT RIGHT (NON CARRY) 2 is: " + b3);
+		System.out.println(String.format("In binary %s", Integer.toBinaryString(b3)));
+		b3 = (~b1)>>2;
+		System.out.println("50 COMP SHIFT RIGHT (CARRY) 2 is: " + b3);
+		System.out.println(String.format("In binary %s", Integer.toBinaryString(b3)));
+		b3 = (~b1)>>>2;
+		System.out.println("50 COMP SHIFT RIGHT (NON CARRY) 2 is: " + b3);
+		System.out.println(String.format("In binary %s", Integer.toBinaryString(b3)));
 	}
 }
