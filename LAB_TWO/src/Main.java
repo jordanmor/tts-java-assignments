@@ -125,6 +125,59 @@ public class Main {
 		n = 35;
 		System.out.println((n>>1 == n / 2)); // true
 		System.out.println((n<<1 == n * 2)); // true
+		
+		anotherMethod(args);
+	}
+	
+	public static void anotherMethod(String[] args) {
+		
+		/* =====-=====-=====-=====-=====
+		   			   STEP 5
+		   =====-=====-=====-=====-===== */
+		
+		// Declare an int variable inside of the `anotherMethod` method and assign it a value.
+		// With the current code is it possible to reference that variable from inside `main()`?
+		int numFour = 4; // it is NOT possible to reference this variable inside main() with the current code.
+		// Below the variable, create an `if` statement to test if the variable you just declared is greater than 1000.  
+		// If it is print "Big Value", if it is not print "Not a big value".
+		if(numFour > 1000) {
+			System.out.println("Big Value");
+		} else {
+			System.out.println("Not a big value");
+		}
+		
+		// Change the statement to use the variable in the output: (n + " is a Big value") or (n + " is not a big value")
+		int ifBlockVar = numFour / 2;
+		if(numFour > 1000) {
+			System.out.println(numFour + " is a Big Value");
+			System.out.println(ifBlockVar + " is half a big variable");
+		} else {
+			System.out.println(numFour + " is not a big value");
+			System.out.println(ifBlockVar + " is definitely small");
+		}
+		// Inside of the if block, create an integer variable and assign it the value of the previously declared integer divided by 2.
+		// Inside of the if block, print that the newly declared variable is half a big variable.
+		// In the else block, print that the half value is definitely small. Oops, is there a problem?  How can it be fixed?  
+		// Call this method from the `main()` method to see its output.
+		
+		/* =====-=====-=====-=====-=====
+		   			   STEP 6
+		   =====-=====-=====-=====-===== */
+		
+		// In the `anotherMethod()`, change the primitive `int` to be a `Integer` variable.
+		// Instead of a hard-coded 1000, create an `Integer` variable to check against, but use the string value "1000" to create the `Integer`.
+		Integer varCheckAgainst = Integer.parseInt("1000");
+		
+		// Instead of using the greater than for comparison in the `if()`, use either the static `compare` method,
+		// or the instance `compareTo` method to perform the check in the `if()`.
+		if(Integer.compare(numFour, varCheckAgainst) == 0) {
+			System.out.println(numFour + " is a Big Value");
+			System.out.println(ifBlockVar + " is half a big variable");
+		} else {
+			System.out.println(numFour + " is not a big value");
+			System.out.println(ifBlockVar + " is definitely small");
+		}
+		
 	}
 
 }
