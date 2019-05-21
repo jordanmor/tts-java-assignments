@@ -67,6 +67,10 @@ public class Main {
 		z += (x*2)-6;
 		System.out.println("z variable: " + z);
 		
+		/* =====-=====-=====-=====-=====
+        		 BOOLEAN OPERATORS
+  		   =====-=====-=====-=====-===== */
+		
 		// Reuse the previous int values and declare them as follows with new values:
 		x = y = 13;
 		z = 15;
@@ -87,6 +91,10 @@ public class Main {
 		System.out.println("Value of x > y: " + (x > y));
 		System.out.println("Value of z < (x+y): " + (z < (x+y)));
 		System.out.println("Value of z > (x+2): " + (z > (x+2)));
+		
+		/* =====-=====-=====-=====-=====
+		         BINARY OPERATORS
+		   =====-=====-=====-=====-===== */
 		
 		// For binary operators, write statements that will verify the first 
 		// 6 lines of the table on binary operations. 
@@ -117,6 +125,83 @@ public class Main {
 		System.out.println("BITWISE 50 COMP SHIFT RIGHT (CARRY) 2 is: " + binaryThree); // -13
 		
 		binaryThree = (-binaryOne)>>>2;
-		System.out.println("BITWISE 50 COMP SHIFT RIGHT (NON CARRY) 2 is: " + binaryThree); // 1073741811
+		System.out.println("BITWISE 50 COMP SHIFT RIGHT (NON CARRY) 2 is: " + binaryThree); // 1073741811		
+	
+		/* =====-=====-=====-=====-=====
+		  			  STRINGS
+		   =====-=====-=====-=====-===== */
+		
+		// Declare three string variables, firstName , lastName , middle and initialize them with the appropriate values. 
+		// Print out each variable to ensure that the values are correct.
+		
+		// Initialize the first directly with a literal string
+		String firstName = "Harry";
+		System.out.println("First name: " + firstName);
+		
+		// Initialize the second with the new operator
+		String lastName = new String("Potter");
+		System.out.println("Last name: " + lastName);
+		
+		// Initialize the third with with assigning a value after initialization
+		String middle;
+		middle = "James";
+		System.out.println("Middle name: " + middle);		
+		
+		// Create a string called fullName that will be made from concatenating 
+		// the previous three values using the concat() method or the + operator.
+		
+		String fullName = firstName + " " + middle + " " + lastName;
+		System.out.println("Full name: " + fullName);
+		
+		// Create three strings with the values of "James", "James" and james.
+		String strOne = "James";
+		String strTwo = "James";
+		String strThree = "james";
+		
+		// Are the first two equal if you use the "==" operator?
+		System.out.println((strOne == strTwo)); // true
+		
+		// How about the equals() method? 
+		System.out.println(strOne.equals(strTwo)); // true
+		
+		// What about the first and third if you use equals()? 
+		System.out.println(strOne.equals(strThree)); // false
+		
+		// How can you compare them and ignore the case?
+		System.out.println(strOne.compareToIgnoreCase(strThree) == 0); // true - compareToIgnoreCase() returns 0 when true
+		
+		// Create a string with a full sentence of at least ten words. 
+		String tenWordSentence = "Here is really great sentence with ten, fantastic and imaginative words!"; 
+		
+		// Using that string and any resultant variables, carry out the following operations:
+		
+		// Check to see if the sentence contains the word 'and'.
+		System.out.println(tenWordSentence.contains("and")); // true
+		
+		// Declare a char variable and put the 16th letter in it.
+		char char16 = tenWordSentence.charAt(15);
+		System.out.println(char16); // g
+		
+		// Declare an int variable and find the first instance of the letter 'u'.
+		int indexOfFirstU = tenWordSentence.indexOf("u");
+		System.out.println(indexOfFirstU); // -1 (there is no u in this sentence)
+		
+		// Declare an int variable and find the last instance of the letter 'c'.
+		int indexOflastC = tenWordSentence.lastIndexOf("c");
+		System.out.println(indexOflastC); // 48
+		
+		// Declare an int and find the total length of the string.
+		int strLength = tenWordSentence.length();
+		System.out.println(strLength); // 72
+		
+		// Does the sentence start with the word "The"?
+		boolean starts = tenWordSentence.startsWith("The");
+		System.out.println(starts); // false
+		
+		// Create a string variable that represents a template to print an integer. 
+		String strTemplate = String.format("The three integers in this string are %d, %d and %d.", 22, 89, 93);
+		// Now use that template and an integer to print the template with the values of 22, 89, and 93.
+		System.out.println(strTemplate); // The three integers in this string are 22, 89 and 93.
+		
 	}
 }
