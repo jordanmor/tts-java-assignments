@@ -156,6 +156,97 @@ public class Main {
 			}
 		}
 		
+		/* =====-=====-=====-=====-=====
+		   ********** STEP 4 ***********
+		   =====-=====-=====-=====-===== */
+		
+		// Use the premise of the random number between 1 and 100 mentioned earlier in the lab, but initialize the value to 0.
+		// Write a while loop that will print out the value and then generate a new value. 
+		// The loop should end if either the generated value is greater than 85 or the loop has been executed 20 times.
+		System.out.println("While Loop Random Numbers");
+		int newRandomNum = 0;
+		int count = 0;
+		while(newRandomNum <= 85 && count <= 20) {
+			System.out.println(newRandomNum);
+			newRandomNum = (int)(Math.random() * 100);
+			count++;
+		}
+		
+		// Use the premise of the random number between 1 and 100 again, this time initialize two different variables. 
+		// Using a do-while loop, calculate and print the value of the two numbers multiplied together and exit the loop 
+		// if the result is more than 1000 or the loop has been executed 30 times.
+		System.out.println("While Do Loop Random Numbers");
+		int numOne = 0;
+		int numTwo = 0;
+		int result = 0;
+		count = 0;
+		do {
+			numOne = (int)(Math.random() * 100);
+			numTwo = (int)(Math.random() * 100);
+			result = numOne * numTwo;
+			System.out.println(result);
+			count++;
+		} while(result <= 1000 && count <= 30);
+		
+		// Write a for loop using the modulus and continue statement that prints out the even numbers between 1-30
+		System.out.println("Print out the even numbers using the continue statement between 1-30:");
+		for(int x = 1; x <= 30; x++) {
+			if(x % 2 != 0) {
+				continue;
+			}
+			System.out.println(x);
+		}
+		
+		// Write nested for loops that will print out the sum of the inner loop up to the index of the outer loop.
+		// Do this for an outer loop of 1 to 30.
+		System.out.println("Nested Loops Exercise One");
+		int innerSum = 0;
+		for(int outer = 1; outer < 30; outer++) {
+			innerSum = 0;
+			for(int inner = 0; inner < outer; inner ++) {
+				innerSum += outer;
+			}
+			System.out.println("Outer: " + outer + ", " + "Inner Sum " + innerSum);
+		}
+				
+		// Modify the behavior so that if the inner sum is greater than 350, the outer loop will print the index 
+		// where this threshold was reached and then quit without executing any more iterations.
+		
+		System.out.println("Nested Loops Exercise Two");
+		innerSum = 0;
+		for(int outer = 1; outer < 30; outer++) {
+			innerSum = 0;
+			for(int inner = 0; inner < outer; inner ++) {
+				innerSum += outer;
+			}
+			System.out.println("Outer: " + outer + ", " + "Inner Sum " + innerSum);
+			if(innerSum > 350) break;
+		}
+		
+		System.out.println("The makeBoundedRandom function with an output of 4 will return " + makeBoundedRandom(4));
+		System.out.println("The makeBoundedRandom function with an output of 14 will return " + makeBoundedRandom(14));
+		
+		// Write a for loop to generate 20 random numbers with a limit of 1000 and print each one.
+		System.out.println("Print 20 random numbers no larger than 1000");
+		for(int x = 0; x < 20; x++) {
+			System.out.println((int)(Math.random() * 1000));
+		}
+		
+		// Write a loop that generates random numbers, each with a different range of 50 up to 100 and print out each one.
+		System.out.println("Print 10 random numbers with a range of 50 up to 100");
+		for(int x = 0; x < 10; x++) {
+			System.out.println((int)(Math.random() * 50) + 50);
+		}
+	}
+	// Create a function called makeBoundedRandom that takes a single integer input and returns an integer. 
+	// The function should check that the input is greater than 10. 
+	// If it is less than ten the function should alert the caller to an error by producing a result of -1.
+	// If the input is greater than 10 the function should produce a random integer between 1 and that number.
+	public static int makeBoundedRandom(int input) {
+		if (input > 10) {
+			return (int)(Math.random() * input);
+		}
+		return -1;
 	}
 
 }
