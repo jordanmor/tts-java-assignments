@@ -1,5 +1,6 @@
 package com.tts;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -175,7 +176,6 @@ public class Main {
 	    String answer = null;
 	    
 	    do {
-	    	repeat = false;
 		    // prompt and read a string
 		    System.out.print("Enter your name: ");
 		    username = scanner.next();
@@ -256,15 +256,83 @@ public class Main {
 		    }
 		    
 		    System.out.print("Do you want to answer the questions again? Y or N: ");
-		    answer = scanner.next();
-		    if(answer == "Y") {
+		    answer = scanner.next().toLowerCase();
+		    if(Objects.equals(answer, "y")) {
 		    	repeat = true;
 		    } else {
 		    	repeat = false;
 		    }
 		    
 	    } while(repeat);
-	   
+	    
+	    System.out.println("While Loop Over");
+	    
+	    System.out.println("Step Five Exercise: ");
+	    stepFiveMethodOne(22);
+	    System.out.println("Running total sum: " + stepFiveMethodTwo(22));
 	}
+	
+	/* =====-=====-=====-=====-=====
+	   ********** STEP 5 ***********
+	   =====-=====-=====-=====-===== */
+	
+	// Create a void method that takes an integer as an argument.
+	
+	public static void stepFiveMethodOne(int number) {
+		/*
+		 *  Loop through the array created in step 3.  Perform the following
+		 *  - if the number is even, print it.
+		 *  - if the number is odd, skip it.
+		 *  - if the number is equal to the number passed in the method, quit processing.
+		 */
+		
+	    int[] myArray = new int[30];
+	  	    
+	    for(int x = 0; x < myArray.length; x++) {
+	    	myArray[x] = x;
+	    }
+	    
+	    for(int item: myArray) {
+	    	if(item == number) {
+	    		System.out.println("The program quit processing because the loop reacher the chosen argument: " + number);
+	    		break;
+	    	} else if(item % 2 == 0) {
+	    		System.out.println(item);
+	    	}
+	    } 
+		   
+	}
+	
+	/*
+	 * Change the method as follows:
+	 * - if the number is odd, print it.
+	 * - if the number is even, add it to a running total of even numbers.
+	 * - if the number is equal to the number passed in the method, return the running total sum from the method.
+	 * Run some tests, including printing out the return value from the method.
+	 */
+
+    public static int stepFiveMethodTwo(int number) {
+
+	    int[] myArray = new int[30];
+  	    
+	    for(int x = 0; x < myArray.length; x++) {
+	    	myArray[x] = x;
+	    }
+	    
+	    int sum = 0;
+	    
+	    for(int item: myArray) {
+	    	if(item == number) {
+	    		break;
+	    	} else if(item % 2 == 0) {
+	    		sum += item;
+	    	} else {
+	    		System.out.println(item);
+	    	}
+	    }
+	    
+	    return sum;
+    	
+    }
 
 }
