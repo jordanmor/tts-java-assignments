@@ -8,10 +8,8 @@ public class Survey {
 	static Scanner scanner = new Scanner(System.in);
 	
 	public static void start() {
-
-		System.out.println("Please enter your name: ");
-		String name = scanner.next();
-		System.out.println("Hello " + name);
+		
+		askName();
 		
 		boolean repeat = false;
 		
@@ -22,15 +20,7 @@ public class Survey {
 			scanner.close();
 		} else {
 			do {
-				String favoritePet = askQuestionStringOutput("What is your favorite pet?");
-				int petAge = askQuestionIntegerOutput("What is the age of your pet?");
-				int luckyNumber = askQuestionIntegerOutput("What is your lucky number?");
-				int carYear = askQuestionIntegerOutput("What is two-digit model year of their car?");
-				String actorName = askQuestionStringOutput("What is the first name of the your favorite actor or actress?");
-				int chosenNumber = askQuestionIntegerOutput("Enter a random number between 1 and 50.");
-				
-				generateValues(favoritePet, petAge, luckyNumber, carYear, actorName, chosenNumber);
-				
+				askQuestions();
 				System.out.println("Would like to answer questions to generate another set of numbers? (yes,no):");
 				response = scanner.next().toLowerCase();
 				if(Objects.equals(response, "yes") || Objects.equals(response, "y")) {
@@ -44,6 +34,22 @@ public class Survey {
 		}
 	}
 	
+	public static void askName() {
+		System.out.println("Please enter your name: ");
+		System.out.println("Hello " + scanner.next());
+	}
+	
+	public static void askQuestions() {		
+		String favoritePet = askQuestionStringOutput("What is your favorite pet?");
+		String actorName = askQuestionStringOutput("What is the first name of the your favorite actor or actress?");
+		int petAge = askQuestionIntegerOutput("What is the age of your pet?");
+		int luckyNumber = askQuestionIntegerOutput("What is your lucky number?");
+		int carYear = askQuestionIntegerOutput("What is two-digit model year of their car?");
+		int chosenNumber = askQuestionIntegerOutput("Enter a random number between 1 and 50.");
+		
+		generateLotteryNumbers(favoritePet, petAge, luckyNumber, carYear, actorName, chosenNumber);
+	}
+	
 	public static String askQuestionStringOutput(String question) {
 		System.out.print(question + ":");
 		return scanner.next();
@@ -54,15 +60,13 @@ public class Survey {
 		return scanner.nextInt();
 	}
 	
-	public static int generateValues(String favoritePet, int petAge, int luckyNumber ,int carYear, String actorName, int chosenNumber) {
-		int sum = 0;
+	public static void generateLotteryNumbers(String favoritePet, int petAge, int luckyNumber ,int carYear, String actorName, int chosenNumber) {
 		final int MAX_RANDOM_NUMBER = 65;
 		final int MAX_MAGIC_BALL = 75;
-		int randomNumOne = (int)(Math.random() * 12);
-		int randomNumTwo = (int)(Math.random() * 15);
-		int randomNumThree = (int)(Math.random() * 18);
-		
-		int magicBall = luckyNumber * randomNumOne;
+
+		// Magic Ball
+		// Generate number by multiplying lucky number by random number with range of 1 - 12;
+		int magicBall = luckyNumber * (int)(Math.random() * 12);
 		if(magicBall > MAX_MAGIC_BALL) {
 			magicBall -= MAX_MAGIC_BALL;
 		}
@@ -76,19 +80,17 @@ public class Survey {
 		int lotteryNumTwo = carYear + luckyNumber;
 		
 		// Lottery Number 3
-		// Use the random number between 1 and 50, subtracting one of the generated random numbers.
-		int lotteryNumThree = chosenNumber - randomNumTwo;
+		// Use the random number between 1 and 50, subtracting by a random number with a range of 1 - 15.
+		int lotteryNumThree = chosenNumber - (int)(Math.random() * 15);
 		
 		// Lottery Number 4
 		// Convert the last letter of their favorite actor/actress to an integer and use that value
 		int lotteryNumFour = (int)actorName.charAt(actorName.length() - 1);
 		
 		// Lottery Number 5
-		// Pet age + lucky number
-		int lotteryNumFive = petAge + luckyNumber;
+		// Pet age + lucky number minus a random number with a range of 1 - 18.
+		int lotteryNumFive = petAge + luckyNumber - (int)(Math.random() * 18);
 		
-		// Magic Ball
-		
-		return sum;
+		System.out.println("Lottery numbers: " + lotteryNumOne + ", " + lotteryNumTwo + ", " + lotteryNumThree + ", " + lotteryNumFour + ", " + lotteryNumFive + " Magic Ball: " + magicBall);
 	}
 }
