@@ -4,4 +4,5 @@
 2. LAB 2 - Java Data Types and Variables - Additional Lab Statements 
 3. LAB 3 - Java Control Flow
 4. LAB 4 - Java Control Flow - Additional Lab Statements
-5. LAB 5 - Data Structures
+5. LAB 5 - Prime Numbers Challenge
+6. LAB 6 - Data Structures
