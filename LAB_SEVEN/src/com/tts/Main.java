@@ -9,6 +9,13 @@ public class Main {
 		ListNode secondNode = new ListNode(1);
 		ListNode thirdNode = new ListNode(2);
 
+		System.out.println(jordansList.isEmpty());
+		
+		jordansList.add(newNode);
+		jordansList.add(secondNode);
+		jordansList.add(thirdNode);
+		
+		System.out.println(jordansList.isEmpty());
 	}
 
 }
