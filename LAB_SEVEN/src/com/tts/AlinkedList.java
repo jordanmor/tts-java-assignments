@@ -13,7 +13,7 @@ public class AlinkedList {
 		return isEmpty;
 	}
 	
-	//  Create a method that adds a new entry at the front of the list
+	//  Adds a new entry at the front of the list
 	public void add(ListNode newNode) {
 		if(isEmpty()) {
 			System.out.println("This is empty");
@@ -41,5 +41,11 @@ public class AlinkedList {
 				}
 			}
 		}
+	}
+	
+	//  Makes an existing list empty
+	public void makeEmpty() {
+		start = null;
+		last = null;
 	}
 }
