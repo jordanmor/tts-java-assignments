@@ -2,6 +2,7 @@ package com.tts;
 
 public class AlinkedList {
 	public ListNode start, last;
+	private int size = 0;
 	
 	// Checks whether the list is empty or not
 	// Returns a boolean
@@ -18,9 +19,12 @@ public class AlinkedList {
 		if(isEmpty()) {
 			System.out.println("This is empty");
 			start = newNode;
+			last = newNode;
+			size++;
 		} else {
 			newNode.Next = start;
 			start = newNode;
+			size++;
 		}
 	}
 	
@@ -47,5 +51,9 @@ public class AlinkedList {
 	public void makeEmpty() {
 		start = null;
 		last = null;
+	}
+	
+	public int size() {
+		return this.size;
 	}
 }

@@ -15,6 +15,9 @@ public class Main {
 		jordansList.add(secondNode);
 		jordansList.add(thirdNode);
 		
+		System.out.println("The list size is " + jordansList.size());
+		
+		System.out.println("Print list:");
 		jordansList.printList();
 		System.out.println("The list is empty (true/false): " + jordansList.isEmpty());
 		
@@ -22,5 +25,4 @@ public class Main {
 		jordansList.printList();
 		System.out.println("The list is empty (true/false): " + jordansList.isEmpty());
 	}
-
 }
