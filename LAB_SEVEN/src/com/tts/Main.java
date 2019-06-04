@@ -15,6 +15,7 @@ public class Main {
 		jordansList.add(secondNode);
 		jordansList.add(thirdNode);
 		
+		jordansList.printList();
 		System.out.println(jordansList.isEmpty());
 	}
 
