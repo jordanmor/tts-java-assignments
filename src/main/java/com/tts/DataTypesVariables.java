@@ -1,6 +1,6 @@
-package com.tts_java_labs;
+package com.tts;
 
-public class LabOne {
+public class DataTypesVariables {
     /* Declare two variables in the class:
      *  - an integer named methodCount
      *  - a string variable named className
@@ -10,10 +10,10 @@ public class LabOne {
 
     public static void main(String[] args) {
         runExerciseOne();
-        // booleanOperators();
-        // binaryOperators();
-        // strings();
-        // wrappers();
+        booleanOperators();
+        binaryOperators();
+        strings();
+        wrappers();
     }
 
     public static void runExerciseOne() {

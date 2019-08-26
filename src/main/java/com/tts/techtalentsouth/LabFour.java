@@ -1,4 +1,4 @@
-package com.tts_java_labs;
+package com.tts.techtalentsouth;
 
 import java.util.Objects;
 import java.util.Scanner;

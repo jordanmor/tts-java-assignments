@@ -1,38 +1,47 @@
 # Tech Talent Select
 
-## TTS JavaScript Assignment - Java Types and Variables
+## TTS Java Labs and Assignments
 
-**Lab/Homework Instructions** 
+### Java Data Types and Variables 
 
-**Assignment file**   
-[`types_variables`](types_variables)
+**Assignment files**   
+[`DataTypesVariables.java`](src/main/java/com/tts/DataTypesVariables.java)  
+[`DataTypesVariablesTest.java`](src/test/java/com/tts/DataTypesVariablesTest.java)
 
-## Tech Talent South
+### Java Control Flow 
+
+**Assignment files**   
+[`ControlFlow.java`](src/main/java/com/tts/ControlFlow.java)  
+[`ControlFlowTest.java`](src/test/java/com/tts/ControlFlowTest.java)  
+
+---
+
+# Tech Talent South
 
 LAB 1 - Java Data Types and Variables  
 **Assignment file**   
-[`tech_talent_south/LabOne.java`](tech_talent_south/LabOne.java)
+[`LabOne.java`](src/main/java/com/tts/techtalentsouth/LabOne.java)
 
 LAB 2 - Java Data Types and Variables - Additional Lab Statements   
 **Assignment file**   
-[`tech_talent_south/LabTwo.java`](tech_talent_south/LabTwo.java)
+[`LabTwo.java`](src/main/java/com/tts/techtalentsouth/LabTwo.java)
 
 LAB 3 - Java Control Flow  
 **Assignment file**   
-[`tech_talent_south/LabThree.java`](tech_talent_south/LabThree.java)
+[`LabThree.java`](src/main/java/com/tts/techtalentsouth/LabThree.java)
 
 LAB 4 - Java Control Flow - Additional Lab Statements
 **Assignment file**   
-[`tech_talent_south/LabFour.java`](tech_talent_south/LabFour.java)
+[`LabFour.java`](src/main/java/com/tts/techtalentsouth/LabFour.java)
   
 LAB 5 - Prime Numbers Challenge  
 **Assignment file**   
-[`tech_talent_south/LabFive.java`](tech_talent_south/LabFive.java)
+[`LabFive.java`](src/main/java/com/tts/techtalentsouth/LabFive.java)
 
 LAB 6 - Data Structures  
 **Assignment file**   
-[`tech_talent_south/LabSix.java`](tech_talent_south/LabSix.java)
+[`LabSix.java`](src/main/java/com/tts/techtalentsouth/LabSix.java)
  
 LAB 7 - Lists  
 **Assignment folder**   
-[`tech_talent_south/lab_seven`](tech_talent_south/lab_seven)
+[`lab_seven`](src/main/java/com/tts/techtalentsouth/lab_seven)

@@ -1,4 +1,4 @@
-package com.tts_java_labs.lab_seven;
+package com.tts.techtalentsouth.lab_seven;
 
 public class ListNode {
     public int value;

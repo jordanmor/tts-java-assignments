@@ -1,4 +1,4 @@
-package com.tts_java_labs;
+package com.tts.techtalentsouth;
 
 public class LabTwo {
     public static void main(String[] args) {
